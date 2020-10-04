@@ -10,7 +10,7 @@ export const listCourses=(courses)=>{
 
 const renderCourse=(course)=>
 {
-	const markup=`<div class="course__card" data-id=${course.id}>
+	const markup=`<a href="/lesson.html#${course.title}#${course.id}"><div class="course__card" data-id=${course.id}>
 				<div class="course__card_image_box">
 					<img src="${course.cover}" class="course__card_image">
 				</div>
@@ -19,6 +19,6 @@ const renderCourse=(course)=>
 					${course.title}
 					</div>
 				</div>
-			</div>	`;
+			</div>	</a>`;
 	elements.courseContainer.insertAdjacentHTML('beforeend',markup);		
 }
